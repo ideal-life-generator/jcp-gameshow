@@ -1,2 +1,0 @@
-# quiz
-### a Sails application
