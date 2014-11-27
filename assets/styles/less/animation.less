@@ -1,0 +1,39 @@
+@keyframes background-blink {
+	0% { background-color: @bg-color; }
+	50% { background-color: @brand-success }
+	100% { background-color: @bg-color; }
+}
+@-webkit-keyframes background-blink {
+	0% { background-color: @bg-color; }
+	50% { background-color: @brand-success }
+	100% { background-color: @bg-color; }
+}
+
+@keyframes text-blink {
+	0% { color: white; }
+	50% { color: @brand-success }
+	100% { color: white; }
+}
+@-webkit-keyframes text-blink {
+	0% { color: white; }
+	50% { color: @brand-success }
+	100% { color: white; }
+}
+
+
+@keyframes text-blink-white {
+	0% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@-webkit-keyframes text-blink-white {
+	0% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.text-blink-white{
+	-webkit-animation: text-blink-white 1s linear infinite;
+	-moz-animation: text-blink-white 1s linear infinite;
+	animation: text-blink-white 1s linear infinite;
+}

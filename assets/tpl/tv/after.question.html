@@ -1,0 +1,30 @@
+<header>
+	<h1>
+		<%- polyglot.t("Question results") %>
+	</h1>
+</header>
+
+<!-- Results -->
+<div class="answers-row">
+	<% _.each(game.getPlayers(), function(user){ %>
+	<% var answer = user.getAnswer(game.get('currentQuestion').id) %>
+	<div class="answer <%- answer.isCorrect ? 'answer-correct' : 'answer-incorrect' %>">
+		<% if(answer.isCorrect){ %>
+			<h3 class="answer-label">
+				<%- polyglot.t("Correct") %>
+			</h3>
+		<% } else { %>
+			<h3 class="answer-label wrong">
+				<%- polyglot.t("Wrong") %>
+			</h3>
+		<% } %>
+
+		<h3 class="time">
+			<%- answer.actualTime %> <%- polyglot.t("sec") %>
+		</h3>
+	</div>
+	<% }) %>
+</div>
+
+<!-- Player's row -->
+<div class="players-row"></div>

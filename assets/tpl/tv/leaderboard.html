@@ -1,0 +1,43 @@
+<header>
+	<h1 class="pull-right centered">
+		<%- polyglot.t("Leaderboard") %>
+	</h1>
+	<h1 style="text-align: left; font-size: 2em; line-height: 1.3em;">
+		<%- polyglot.t("The more you know") %>
+		<br />
+		<strong>
+			<%- polyglot.t("The more time you save") %>
+		</strong>
+	</h1>
+</header>
+
+<table id="leaderboard-table">
+	<thead>
+		<tr>
+			<th>
+				<%- polyglot.t("Place") %>
+			</th>
+			<th>
+				<%- polyglot.t("Name") %>
+			</th>
+			<th>
+				<%- polyglot.t("Country") %>
+			</th>
+			<th>
+				<%- polyglot.t("Time") %>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+	<% var place = 1 %>
+	<% _.each(collection, function(result){ %>
+		<tr>
+			<td class="player-place"><%- place %></td>
+			<td class="player-name"><%- result.firstName %></td>
+			<td class="player-country"><%- result.country %></td>
+			<td class="player-result"><%- result.time %>s</td>
+		</tr>
+		<% place++ %>
+	<% }) %>
+	</tbody>
+</table>

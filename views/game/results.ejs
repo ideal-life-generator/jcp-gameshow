@@ -1,0 +1,10 @@
+<% layout('../layout/default.ejs') %>
+
+<div class="container-fluid" id="content"></div>
+
+<script type="text/javascript">
+    window.game = <%- JSON.stringify(game) %>;
+    window.player = <%- JSON.stringify(player) %>;
+</script>
+
+<% script('/js/app.results.js') %>

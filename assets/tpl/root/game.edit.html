@@ -1,0 +1,100 @@
+<form class="form-horizontal game-form" role="form" id="edit-user-from">
+    <div class="form-group">
+        <div class="col-xs-12">
+            <div class="btn-group btn-group-justified">
+                <div class="btn-group">
+                    <a href="#" class="btn btn-danger btn-start-game"><i class="glyphicon glyphicon-fire"></i>
+                        <%- polyglot.t("Start Game") %>
+                    </a>
+                </div>
+                <div class="btn-group">
+                    <a href="#game/view/<%= data.id %>" class="btn btn-primary" target="_blank"><i class="glyphicon glyphicon-eye-open"></i>
+                        <%- polyglot.t("Big Screen") %>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">
+            <%- polyglot.t("Name") %>
+        </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control name" name="name" placeholder="<%- polyglot.t('Name') %>" value="<%= data.name %>">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">
+            <%- polyglot.t("Description") %>
+        </label>
+        <div class="col-sm-10">
+            <textarea class="form-control description" name="description" placeholder="<%- polyglot.t('Description') %>" rows="5"><%= data.description %></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">
+            <%- polyglot.t("Image") %>
+        </label>
+        <div class="col-sm-10">
+            <% if (data.logoUrl) { %>
+            <img src="<%= data.logoUrl %>" class="thumbnail col-sm-3"/>
+            <% } %>
+            <a href="#" class="btn btn-primary btn-upload clearfix"><i class="glyphicon glyphicon-upload"></i>
+                <%- polyglot.t("Upload logo") %>
+            </a>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">
+            <%- polyglot.t("Intro Screen Text") %>
+        </label>
+        <div class="col-sm-10">
+            <textarea class="form-control introScreenText" name="introScreenText" placeholder="<%- polyglot.t('Intro Screen Text') %>" rows="5"><%= data.introScreenText %></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">
+            <%- polyglot.t("Final Screen Text") %>
+        </label>
+        <div class="col-sm-10">
+            <textarea class="form-control finalScreenText" name="finalScreenText" placeholder="<%- polyglot.t('Final Screen Text') %>" rows="5"><%= data.finalScreenText %></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">
+            <%- polyglot.t("Client Welcome Text") %>
+        </label>
+        <div class="col-sm-10">
+            <textarea class="form-control clientWelcomeText" name="clientWelcomeText" placeholder="<%- polyglot.t('Client Welcome Text') %>" rows="5"><%= data.clientWelcomeText %></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">
+            <%- polyglot.t("Client Fail Text") %>
+        </label>
+        <div class="col-sm-10">
+            <textarea class="form-control clientFailText" name="clientFailText" placeholder="<%- polyglot.t('Client Fail Text') %>" rows="5"><%= data.clientFailText %></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">
+            <%- polyglot.t("Client Winning Text") %>
+        </label>
+        <div class="col-sm-10">
+            <textarea class="form-control clientWinningText" name="clientWinningText" placeholder="<%- polyglot.t('Client Winning Text') %>" rows="5"><%= data.clientWinningText %></textarea>
+        </div>
+    </div>
+    <hr/>
+    <div class="form-group">
+        <div class="questions col-sm-12"></div>
+    </div>
+    <hr/>
+    <div class="form-group">
+        <div class="col-sm-12">
+            <a href="#" class="btn btn-success btn-add-question" style="width: 100%">
+                <i class="glyphicon glyphicon-plus"></i>
+               <%- polyglot.t("Add question") %>
+            </a>
+        </div>
+    </div>
+</form>

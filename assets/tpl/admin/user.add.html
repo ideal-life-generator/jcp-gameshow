@@ -1,0 +1,46 @@
+<form class="form-horizontal" role="form" id="edit-user-from">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">First Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control firstName" name="firstName" placeholder="First Name" value="<%- data.firstName %>">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Last Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control lastName" name="lastName" placeholder="Last Name" value="<%- data.lastName %>">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Role</label>
+        <div class="col-sm-10" >
+            <select name="role" class="form-control role">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control email" name="email" placeholder="Email" value="<%- data.email %>" autocomplete = "off">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control password" name="password" placeholder="Password">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Password Repeat</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control passwordRepeat" name="passwordRepeat" placeholder="Password Repeat" autocomplete = "off">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </div>
+</form>

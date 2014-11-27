@@ -1,0 +1,8 @@
+<td><%- model.getFullName() %></td>
+<td class="text-right">
+    <% if (model.isQuestionAnswered(question)) { %>
+        <p><i class="glyphicon glyphicon-check"></i> Answered.</p>
+    <% } else { %>
+        <p><i class="glyphicon glyphicon-unchecked"></i> No answered.</p>
+    <% } %>
+</td>

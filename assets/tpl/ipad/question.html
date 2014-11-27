@@ -1,0 +1,20 @@
+<div class="row question-container">
+    <div class="col-sm-6">
+        <header>
+			<h1><%- user.get('firstName') %></h1>
+        </header>
+
+		<div class="centered">
+			<div class="question-timer"></div>
+		</div>
+    </div>
+    <div class="col-sm-6">
+        <a class="btn-large btn-version-a"><span class="text"><%- question.get('versionA') %></span></a>
+
+        <a class="btn-large btn-version-b"><span class="text"><%- question.get('versionB') %></span></a>
+
+        <a class="btn-large btn-version-c"><span class="text"><%- question.get('versionC') %></span></a>
+
+        <a class="btn-large btn-version-d"><span class="text"><%- question.get('versionD') %></span></a>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<td><%- data.question %></td>
+<td><%- model.getCategoryName() %></td>
+<td><%- model.getLevelName() %></td>
+<td><%- data.timeLimit %></td>
+<td class="right-align">
+    <a href="#question/edit/<%-data.id%>" class="btn btn-warning" title="Edit"><i class="glyphicon glyphicon-edit"></i></a>
+	<a href="#question/delete/<%-data.id%>" class="btn btn-danger" title="Delete"><i class="glyphicon glyphicon-trash"></i></a>
+</td>

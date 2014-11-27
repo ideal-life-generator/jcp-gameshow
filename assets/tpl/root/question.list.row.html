@@ -1,0 +1,15 @@
+<td>
+    <% if (data.imageUrl) { %>
+        <img src="<%= data.imageUrl %>" class="thumbnail" style="width: 50px" />
+    <% } else { %>
+        <p>
+        	<%- polyglot.t("No image") %>
+        </p>
+    <% } %>
+</td>
+<td><%=data.question %></td>
+<td><%=data.timeLimit %></td>
+<td class="text-right">
+    <a href="#" class="btn btn-warning btn-edit-game"><i class="glyphicon glyphicon-edit"></i></a>
+    <a href="#" class="btn btn-danger btn-delete-game"><i class="glyphicon glyphicon-trash"></i></a>
+</td>

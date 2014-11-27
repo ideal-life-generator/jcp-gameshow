@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-sm-6">
+		<div class="centered">
+			<div class="question-body">
+				<h3 class="header">
+					<%- polyglot.t("Question") %> <%- game.getQuestionRatio() %>
+				</h3>
+
+				<h1>
+					<%- question.get('question') %>
+				</h1>
+
+				<% if(question.get('imageUrl')){ %>
+					<img src="<%- question.get('imageUrl') %>" class="question-image"/>
+				<% } %>
+			</div>
+		</div>
+    </div>
+	<div class="col-sm-6">
+		<a class="btn-large btn-version-a"><span class="text"><%- question.get('versionA') %></span></a>
+
+		<a class="btn-large btn-version-b"><span class="text"><%- question.get('versionB') %></span></a>
+
+		<a class="btn-large btn-version-c"><span class="text"><%- question.get('versionC') %></span></a>
+
+		<a class="btn-large btn-version-d"><span class="text"><%- question.get('versionD') %></span></a>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<div class="players-row"></div>
+	</div>
+</div>

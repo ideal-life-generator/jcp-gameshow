@@ -1,0 +1,33 @@
+<div class="row">
+	<% _.each(collection, function(player) {%>
+	<div class="person player" data-id="<%- player.get('id') %>">
+
+		<a class="person-avatar" href="#">
+			<img src="<%- player.getImageUrl() %>" />
+		</a>
+
+		<h3 class="person-name"><%- player.get('firstName') %></h3>
+		<p class="country-line"><%- player.get('country') %></p>
+
+		<div class="player-timer"
+				data-actual-question-time="<%- player.get('actualQuestionTime') %>"
+				data-time-left="<%- player.get('timeLeft') %>"
+				data-ticking="<%- player.get('isTicking') %>"
+				data-total-time="<%- player.get('totalTime') %>"></div>
+
+		<div class="player-position">
+			<% if(showPosition){ %>
+				<% var number = player.get('position') %>
+
+				<% if(number == null || number == 0){ %>
+					-
+				<% } else { %>
+					<%- numeral(number).format('0') %><span class="suffix"><%- numeral(number).format('o').replace(number, '') %></span>
+				<% } %>
+			<% } else { %>
+				-
+			<% } %>
+		</div>
+	</div>
+	<%}) %>
+</div>

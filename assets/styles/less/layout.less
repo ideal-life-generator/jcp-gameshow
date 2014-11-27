@@ -1,0 +1,36 @@
+///
+/// General layout
+///
+html{
+	height: 100%;
+}
+
+body{
+	height: auto;
+	min-height: 100%;
+	background-color: @bg-color;
+	background-image: url('../img/bg.jpg');
+	background-attachment: fixed;
+	font-family: @font-family-sans-serif;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	padding: 3%;
+
+	color: white;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+#background-video{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	background: url('../img/bg.jpg') no-repeat;
+	background-size: cover;
+}

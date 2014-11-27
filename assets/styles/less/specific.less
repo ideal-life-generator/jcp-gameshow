@@ -1,0 +1,113 @@
+#modal-loading {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1060;
+	background-color: #000000;
+	opacity: .5;
+
+	>.msg {
+		position: fixed;
+		color: #fff;
+		width: 100%;
+		text-align: center;
+		top: 40%;
+	}
+}
+
+#license-plate{
+	background-image: url('../img/@{language}/license.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+	width: 493px;
+	height: 382px;
+	padding: 153px 121px 147px 123px;
+	position: relative;
+	margin-top: -50px;
+	margin-bottom: -30px;
+
+	.user-photo{
+		float: left;
+		width: 80px;
+		height: auto;
+	}
+
+	.user-name{
+		font-weight: 300;
+		color: black;
+		margin: 0px;
+		font-size: 0.9em;
+		padding-left: 5px;
+		overflow: hidden;
+	}
+}
+
+.license-tv{
+
+	#license-plate{
+		background-image: url('../img/@{language}/license@2x.png');
+		width: 1007px;
+		height: 490px;
+		padding: 168px 250px 150px 259px;
+		margin-top: -30px;
+
+		.user-photo{
+			width: auto;
+			max-width: 195px;
+			.transform(rotate(180deg));
+		}
+
+		.user-name{
+			font-size: 1.5em;
+			margin-top: 5px;
+			padding-left: 10px;
+			line-height: 1.2em;
+		}
+	}
+}
+
+#leaderboard-table{
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0px 4px;
+
+	thead{
+		th{
+			text-transform: uppercase;
+		}
+	}
+
+	tbody{
+		td{
+			padding: 10px 10px;
+		}
+
+		.player-place{
+			font-weight: bold;
+		}
+
+		.player-name{
+			font-weight: bold;
+		}
+
+		tr:nth-child(even){
+			background-color: rgba(255, 255, 255, 0.24);
+		}
+		tr:nth-child(odd){
+			background-color: rgba(255, 255, 255, 0.15);
+		}
+
+		// this affects rows 1, 2, 3
+		tr:nth-child(-n+3){
+			background-color: rgba(127, 255, 106, 0.14);
+
+			td{
+				padding: 10px 13px;
+			}
+		}
+	}
+}

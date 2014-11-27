@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-sm-6">
+		<div class="centered">
+			<div class="question-body">
+				<h3 class="header">Question <%- game.getQuestionRatio() %></h3>
+
+				<h1>
+					<%- question.get('question') %>
+				</h1>
+
+				<% if(question.get('imageUrl')){ %>
+					<img src="<%- question.get('imageUrl') %>" class="question-image"/>
+				<% } %>
+			</div>
+
+		</div>
+    </div>
+	<div class="col-sm-6">
+		<a class="btn-large btn-start-question"><span class="text">Show answers</span></a>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<div class="players-row"></div>
+	</div>
+</div>

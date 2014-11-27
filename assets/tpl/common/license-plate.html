@@ -1,0 +1,7 @@
+<div id="license-plate">
+	<% if(model.get('imageUrl')){ %>
+	<img src="<%- model.get('imageUrl') %>" class="user-photo" />
+	<% } %>
+
+	<h3 class="user-name"><%- model.getFullName() %></h3>
+</div>

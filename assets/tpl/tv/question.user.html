@@ -1,0 +1,12 @@
+<td><%- model.getFullName() %></td>
+<td class="text-right">
+    <% if (model.isQuestionAnswered(question)) { %>
+        <p><i class="glyphicon glyphicon-check"></i>
+        	<%- polyglot.t("Answered.") %>
+        </p>
+    <% } else { %>
+        <p><i class="glyphicon glyphicon-unchecked"></i>
+        	<%- polyglot.t("No answered.") %>
+        </p>
+    <% } %>
+</td>

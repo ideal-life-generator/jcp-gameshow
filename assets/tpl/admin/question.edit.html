@@ -1,0 +1,78 @@
+<form class="form-horizontal from-add-question" role="form">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Category</label>
+        <div class="col-sm-10">
+            <select name="category" class="form-control categoryId">
+                <option value="">SELECT CATEGORY</option>
+                <% model._categories.each(function(category) {%>
+                    <option value="<%- category.get('id') %>" <%- category.get('id')===model.get('categoryId') ? 'selected' : null %>><%- category.get('name') %></option>
+                <%}) %>
+            </select>
+        </div>
+    </div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Level</label>
+		<div class="col-sm-10">
+			<select name="level" class="form-control level">
+				<option value="">SELECT LEVEL</option>
+				<% model._levels.each(function(level) {%>
+				<option value="<%- level.get('id') %>" <%- level.get('id')===model.get('level') ? 'selected' : null %>><%- level.get('name') %></option>
+				<%}) %>
+			</select>
+		</div>
+	</div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Image</label>
+        <div class="col-sm-10">
+            <% if (data.imageUrl) { %>
+                <img src="<%- data.imageUrl %>" class="thumbnail col-sm-3"/>
+            <% } %>
+            <a href="#" class="btn btn-primary btn-upload-image"><i class="glyphicon glyphicon-upload"></i> Upload image</a>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Question</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control question" name="question" placeholder="Question" value="<%- data.question %>">
+        </div>
+    </div>
+    <div class="form-group has-feedback">
+        <label class="col-sm-2 control-label">Version A</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control versionA" name="versionA" placeholder="version A" value="<%- data.versionA %>">
+            <span class="glyphicon glyphicon-<%= model.isCorrect('a') ? 'ok' : 'remove' %> form-control-feedback btn-version-a"></span>
+        </div>
+    </div>
+    <div class="form-group has-feedback">
+        <label class="col-sm-2 control-label">Version B</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control versionB" name="versionB" placeholder="Version B" value="<%- data.versionB %>">
+            <span class="glyphicon glyphicon-<%= model.isCorrect('b') ? 'ok' : 'remove' %> form-control-feedback btn-version-b"></span>
+        </div>
+    </div>
+    <div class="form-group has-feedback">
+        <label class="col-sm-2 control-label">Version C</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control versionC" name="versionC" placeholder="Version C" value="<%- data.versionC %>">
+            <span class="glyphicon glyphicon-<%= model.isCorrect('c') ? 'ok' : 'remove' %> form-control-feedback btn-version-c"></span>
+        </div>
+    </div>
+    <div class="form-group has-feedback">
+        <label class="col-sm-2 control-label">Version D</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control versionD" name="versionD" placeholder="Version D" value="<%- data.versionD %>">
+            <span class="glyphicon glyphicon-<%= model.isCorrect('d') ? 'ok' : 'remove' %> form-control-feedback btn-version-d"></span>
+        </div>
+    </div>
+    <div class="form-group has-feedback">
+        <label class="col-sm-2 control-label">Time Limit</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control timeLimit" name="timeLimit" placeholder="Time Limit" value="<%- data.timeLimit %>">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary"><%- model.isNew() ? 'Save' : 'Update' %></button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,43 @@
+<form class="form-horizontal" role="form" id="edit-user-from">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">First Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control firstName" name="firstName" placeholder="First Name" value="<%- data.firstName %>">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Last Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control lastName" name="lastName" placeholder="Last Name" value="<%- data.lastName %>">
+        </div>
+    </div>
+	<% if (data.imageUrl) { %>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Image</label>
+		<div class="col-sm-10">
+			<img src="<%- data.imageUrl %>" class="thumbnail col-sm-3"/>
+		</div>
+	</div>
+	<% } %>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Role</label>
+        <div class="col-sm-10" >
+            <select name="role" class="form-control role">
+                <option value="user" <%= data.role === 'user' ? 'selected' : null %>>User</option>
+                <option value="admin" <%= data.role === 'admin' ? 'selected' : null %>>Admin</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control email" name="email" placeholder="Email" value="<%- data.email %>">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">Update</button>
+            <a href="#user/delete/<%- data.id %>" class="btn btn-danger btn-delete">Delete</a>
+        </div>
+    </div>
+</form>

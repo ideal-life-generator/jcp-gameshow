@@ -1,0 +1,225 @@
+///
+/// Common classes and elements
+///
+header{
+	text-align: center;
+
+	min-height: 110px;
+	background-image: url('../img/@{language}/logo-small.png');
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: 100px 100px;
+	
+	h1{
+		padding-left: 120px;
+		padding-right: 120px;
+
+		font-size: 2.8em;
+		margin-bottom: 40px;
+		text-transform: uppercase;
+		line-height: 1.1em;
+		padding-top: 15px;
+	}
+}
+
+b, strong {
+	font-weight: 500;
+}
+
+input[type='text'], input[type='email'], input[type='password'], input[type='url'], textarea{
+	width: 100%;
+	color: darken(white, 10%);
+	background-color: rgba(0, 0, 0, 0.81);
+	.box-shadow(none);
+	border: 0px none black;
+	font-size: 1.1em;
+	padding: 9px 17px;
+	height: auto;
+	.rounded(0px);
+
+	.placeholder(darken(white, 5%));
+}
+
+select{
+	border: 0px none black;
+
+	color: darken(white, 10%);
+	background-color: rgba(0, 0, 0, 0.81);
+	font-size: 1.1em;
+	padding: 9px 17px;
+
+	height: auto;
+	.rounded(0px);
+}
+
+button, input[type='button'], .btn-orange{
+	background-color: @brand-color;
+	border-style: none;
+	color: black;
+	font-size: 1.4em;
+	font-weight: 300;
+	padding: 1px 29px;
+	padding-top: 5px;;
+	text-transform: uppercase;
+	display: inline-block;
+
+	&:hover,
+	&:active{
+		text-decoration: none;
+		color: black;
+	}
+}
+
+h1{
+	text-transform: uppercase;
+	font-size: 2em;
+	font-weight: 300;
+}
+
+h2{
+	text-transform: uppercase;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+
+h3{
+	text-transform: uppercase;
+	font-size: 1.2em;
+	font-weight: 300;
+}
+
+h4{
+	font-weight: 300;
+}
+
+h5{
+	font-weight: 300;
+}
+
+label{
+	font-weight: 300;
+}
+
+input{
+	font-weight: 300;
+}
+
+.btn{
+	font-weight: 300;
+}
+
+table{
+	th{
+		font-weight: 500;
+	}
+}
+
+.orange{
+	color: @brand-color;
+}
+
+.btn-large{
+	display: table;
+	width: 100%;
+	text-decoration: none;
+	margin-bottom: 20px;
+
+	&:hover,
+	&:focus,
+	&:active{
+		text-decoration: none;
+	}
+	
+	.text{
+		background-color: @bg-color;
+		text-align: center;
+		color: white;
+		text-decoration: none;
+		cursor: pointer;
+
+		display: table-cell;
+		vertical-align: middle;
+		width: 100%;
+		height: 120px;
+	}
+
+	&.active{
+		.text{
+			background-color: @brand-color-darker;
+			text-decoration: none;
+			color: white;
+			border-style: none;
+		}
+	}
+
+	&.blinking {
+		.text{
+			-webkit-animation: background-blink 0.5s linear infinite;
+			-moz-animation: background-blink 0.5s linear infinite;
+			animation: background-blink 0.5s linear infinite;
+		}
+	}
+}
+
+.centered{
+	text-align: center;
+}
+
+.correct{
+	color: @brand-success;
+}
+
+.wrong{
+	color: @brand-danger;
+}
+
+.logo{
+	width: 165px;
+	height: 165px;
+	margin: 15px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 165px 165px;
+	background-image: url('../img/@{language}/logo.png');
+
+	&.span{
+		display: inline-block;
+	}
+
+	&.logo-small{
+		width: 110px;
+		height: 110px;
+		background-image: url('../img/@{language}/logo-small.png');
+		background-size: 110px 110px;
+		margin: 10px;
+	}
+}
+
+.table.table-striped > tbody > tr:nth-child(odd) > td,
+.table.table-striped > tbody > tr:nth-child(odd) > th {
+	background-color: transparent;
+}
+
+.table.table-striped > tbody > tr:nth-child(even):hover > td,
+.table.table-striped > tbody > tr:nth-child(even):hover > th {
+	background-color: transparent;
+}
+
+.video-js{
+	video{
+
+		position: absolute;
+		top: 0px;
+		left: 0px;
+
+		width: 100%;
+	}
+
+	.vjs-control-bar{
+		display: none;
+	}
+
+	.vjs-error-display{
+		position: absolute;
+	}
+}
